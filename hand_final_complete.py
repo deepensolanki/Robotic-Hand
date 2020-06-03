@@ -37,7 +37,7 @@ class ProcessImage:
 
                 frame_HSV = cv.cvtColor(frame, cv.COLOR_BGR2HSV)
 
-                [pinkyX, pinkyY] = self.(frame_HSV, 153, 76, 0, 167, 246, 255)
+                [pinkyX, pinkyY] = self.DetectObject(frame_HSV, 153, 76, 0, 167, 246, 255)
                 pinkyDist = self.CalculateDistance(pinkyX,pinkyY,refX,refY)
                 self.pinkySendSPI(pinkyDist)
                 
